@@ -1,0 +1,50 @@
+.modal_main_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    // top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    top: 70px;
+
+    .modal_main_box {
+        width: 750px;
+        height: 850px;
+        background-color: #27272c;
+        border-radius: 20px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+
+        .modal_banner_box {
+            width: 100%;
+            height: 255px;
+            border-radius: 20px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .modal_title_box {
+            margin-top: 1.5rem;
+
+            h5 {
+                font-size: 3re;
+            }
+        }
+
+        .modal_detail_wrapper {
+            margin-top: 1.5rem;
+        }
+
+
+
+    }
+
+}
