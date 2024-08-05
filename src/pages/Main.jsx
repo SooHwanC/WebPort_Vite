@@ -154,8 +154,6 @@ function Main() {
 
 
 
-
-
     return (
         <div className="App">
             {activeSlide >= 2 && activeSlide <= 6 &&
@@ -240,7 +238,7 @@ function Main() {
                     </div>
 
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className='swiper-no-swiping'>
                     <div className="second_block">
                         <div className="second_block_photo">
                             <img src="/profile_pic.jpg" />
@@ -264,7 +262,7 @@ function Main() {
                             </ul>
                         </div>
                         <div className="background_img_wrapper_02">
-                            <animated.div className="img_01 s" {...bind1()} style={{
+                            <animated.div className="img_01" {...bind1()} style={{
                                 ...props1,
                                 transform: props1.x.to(x => `translate3d(${x}px, ${props1.y.get()}px, 0)`)
                             }}>
@@ -288,8 +286,6 @@ function Main() {
                 <SwiperSlide >
                     <CircularSlider />
                 </SwiperSlide>
-
-
 
                 <SwiperSlide>
                     <div className='skill_block'>

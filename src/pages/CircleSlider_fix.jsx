@@ -167,16 +167,18 @@ const CircularSlider = () => {
 
     const [hasInteracted, setHasInteracted] = useState(false);
 
+
     const [openModal, setOpenModal] = useState(null);
 
     const openModalForSlide = (slideIndex) => {
-        console.log('slideIndex:', slideIndex);
         setOpenModal(slideIndex);
     }
 
     const closeModal = () => {
         setOpenModal(null);
     }
+
+
     return (
         <div className="slider">
             <div className="circular-slider circular-slider-1">
@@ -272,11 +274,11 @@ const CircularSlider = () => {
                     </div>
                 </div>
             </div>
-            {openModal === 0 && <JobtalksModal />}
-            {openModal === 1 && <IttyMoadl />}
-            {openModal === 2 && <CodebridgeModal />}
-            {openModal === 3 && <TravelmakerModal />}
-            {openModal === 4 && <JavaburgerModal />}
+            {openModal === 0 && <JobtalksModal closeModal={closeModal} />}
+            {openModal === 1 && <IttyMoadl closeModal={closeModal} />}
+            {openModal === 2 && <CodebridgeModal closeModal={closeModal} />}
+            {openModal === 3 && <TravelmakerModal closeModal={closeModal} />}
+            {openModal === 4 && <JavaburgerModal closeModal={closeModal} />}
         </div>
     );
 };
