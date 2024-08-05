@@ -238,7 +238,7 @@ function Main() {
                     </div>
 
                 </SwiperSlide>
-                <SwiperSlide className='swiper-no-swiping'>
+                <SwiperSlide>
                     <div className="second_block">
                         <div className="second_block_photo">
                             <img src="/profile_pic.jpg" />
