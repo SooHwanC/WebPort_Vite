@@ -4,6 +4,7 @@ import '../SCSS/modals/Modal.scss'
 const JobtalksModal = ({ closeModal }) => {
 
     const modalRef = useRef(null);
+    const modalInnerRef = useRef(null);
 
     useEffect(() => {
         const handleWheel = (e) => {
@@ -23,14 +24,14 @@ const JobtalksModal = ({ closeModal }) => {
     }, []);
 
     const handleClickOutside = (e) => {
-        if (modalRef.current && !modalRef.current.contains(e.target)) {
+        if (modalInnerRef.current && !modalInnerRef.current.contains(e.target)) {
             closeModal();
         }
     };
 
     return (
-        <div className='modal_main_wrapper' onClick={handleClickOutside}>
-            <div className="modal_main_box" ref={modalRef} onClick={(e) => e.stopPropagation()}>
+        <div className='modal_main_wrapper' ref={modalRef} onClick={handleClickOutside}>
+            <div className="modal_main_box" ref={modalInnerRef} onClick={(e) => e.stopPropagation()}>
                 <div className="close_btn_box">
                     <img src="/modal/modal_close.svg" alt="close" onClick={closeModal} />
                 </div>
@@ -69,18 +70,18 @@ const JobtalksModal = ({ closeModal }) => {
                     </h6>
                     <hr />
                     <div className='modal_what_do_box'>
-                        <h7>
+                        <p className='small_title'>
                             1. 데이터 정제
-                        </h7>
+                        </p>
                         <p>
                             • 합격 인증 자기소개서 데이터 수집
                         </p>
                         <p>
                             • 데이터 전처리(개인정보 마스킹, 불용어 처리)
                         </p>
-                        <h7>
+                        <p className='small_title'>
                             2. LLM
-                        </h7>
+                        </p>
                         <p>
                             • 오픈소스 LLM FineTuning (Axolotl)
                         </p>
@@ -90,9 +91,9 @@ const JobtalksModal = ({ closeModal }) => {
                         <p>
                             • VLLM을 활용한 LLM 모델 서빙 (비동기 및 분산 추론 지원)
                         </p>
-                        <h7>
+                        <p className='small_title'>
                             3. RAG
-                        </h7>
+                        </p>
                         <p>
                             • 사용자가 입력한 회사 정보 실시간 크롤링
                         </p>

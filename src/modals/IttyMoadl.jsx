@@ -4,6 +4,7 @@ import '../SCSS/modals/Modal.scss'
 const IttyMoadl = ({ closeModal }) => {
 
     const modalRef = useRef(null);
+    const modalInnerRef = useRef(null);
 
     useEffect(() => {
         const handleWheel = (e) => {
@@ -23,14 +24,14 @@ const IttyMoadl = ({ closeModal }) => {
     }, []);
 
     const handleClickOutside = (e) => {
-        if (modalRef.current && !modalRef.current.contains(e.target)) {
+        if (modalInnerRef.current && !modalInnerRef.current.contains(e.target)) {
             closeModal();
         }
     };
 
     return (
-        <div className='modal_main_wrapper' onClick={handleClickOutside}>
-            <div className="modal_main_box" ref={modalRef} onClick={(e) => e.stopPropagation()}>
+        <div className='modal_main_wrapper' ref={modalRef} onClick={handleClickOutside}>
+            <div className="modal_main_box" ref={modalInnerRef} onClick={(e) => e.stopPropagation()}>
                 <div className="close_btn_box">
                     <img src="/modal/modal_close.svg" alt="close" onClick={closeModal} />
                 </div>
