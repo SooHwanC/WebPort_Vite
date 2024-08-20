@@ -313,17 +313,23 @@ function Main() {
                                 <h2>
                                     FrameWork
                                 </h2>
-                                <div className='right_box_logo1'>
+                                <div className='right_box_logo2'>
                                     <div className='logo_box'>
                                         <img src='/react.svg' alt='logo_react' className='tilt-animation' />
+                                    </div>
+                                    <div className='logo_box'>
+                                        <img src='/skills/vue.svg' alt='logo_vue' className='tilt-animation' />
                                     </div>
                                 </div>
                                 <h2>
                                     Library
                                 </h2>
-                                <div className='right_box_logo2'>
+                                <div className='right_box_logo3'>
                                     <div className='logo_box'>
                                         <img src='/redux.svg' alt='logo_redux' className='tilt-animation' />
+                                    </div>
+                                    <div className='logo_box'>
+                                        <img src='/skills/pinia.svg' alt='logo_pinia' className='tilt-animation' />
                                     </div>
                                     <div className='logo_box'>
                                         <img src='/sass.svg' alt='logo_sass' className='tilt-animation' />
@@ -359,12 +365,18 @@ function Main() {
                                 <h2>
                                     FrameWork
                                 </h2>
-                                <div className='right_box_logo2'>
+                                <div className='right_box_logo4'>
                                     <div className='logo_box_large'>
                                         <img src='/springboot.svg' className='large_svg' alt='logo_spb' />
                                     </div>
                                     <div className='logo_box_large'>
                                         <img src='/node1.svg' className='large_svg' alt='logo_node' />
+                                    </div>
+                                    <div className='logo_box_large'>
+                                        <img src='/skills/flask.svg' className='large_svg' alt='logo_flask' />
+                                    </div>
+                                    <div className='logo_box_large'>
+                                        <img src='/skills/fastapi.svg' className='large_svg' alt='logo_fastapi' />
                                     </div>
                                 </div>
                                 <h2>
@@ -411,6 +423,27 @@ function Main() {
                                     <div className='logo_box'>
                                         <img src='/github.svg' alt='logo_github' className='tilt-animation' />
                                     </div>
+                                    <div className='logo_box'>
+                                        <h2>
+                                            LLM
+                                        </h2>
+                                    </div>
+                                    <div className='logo_box'>
+                                        <h2>
+                                            Axolotl
+                                        </h2>
+                                    </div>
+                                    <div className='logo_box'>
+                                        <h2>
+                                            STT
+                                            (Whisper)
+                                        </h2>
+                                    </div>
+                                    <div className='logo_box'>
+                                        <h2>
+                                            Vllm
+                                        </h2>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -419,6 +452,7 @@ function Main() {
 
                 <SwiperSlide>
                     <div className='copyright'>
+                        <video src="/outro.mp4" autoPlay playsInline muted loop></video>
                         <p>
                             본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.
                         </p>
