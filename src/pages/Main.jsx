@@ -453,12 +453,14 @@ function Main() {
                 <SwiperSlide>
                     <div className='copyright'>
                         <video src="/outro.mp4" autoPlay playsInline muted loop></video>
-                        <p>
-                            본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.
-                        </p>
-                        <span>
-                            @ 2024. Choi Soo Hwan. All rights reserved.
-                        </span>
+                        <div className='copyright_text'>
+                            <p>
+                                본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.
+                            </p>
+                            <span>
+                                @ 2024. Choi Soo Hwan. All rights reserved.
+                            </span>
+                        </div>
                     </div>
 
                 </SwiperSlide >

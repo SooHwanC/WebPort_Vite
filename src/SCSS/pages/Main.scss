@@ -43,15 +43,18 @@
             display: flex;
             align-items: center;
 
+            
             li {
+                font-family: 'SUIT Variable';
                 // font-family: 'GangwonEduPowerExtraBoldA';
                 font-size: 1.5rem;
                 // margin-right: 2rem;
-                color: #6d91b1;
+                // color: #6d91b1;
+                color: #B6BEC9;
                 cursor: pointer;
                 text-align: center;
                 width: 150px;
-                font-weight: 500;
+                font-weight: 600;
 
                 @media (max-width:710px) {
                     width: 100px;
@@ -66,7 +69,8 @@
             .active-menu-item {
                 font-size: 1.5rem;
                 text-decoration: underline;
-                color: white;
+                // color: white;
+                color: #A2C5F4;
 
                 @media (max-width:555px) {
                     font-size: 1.2rem;
@@ -849,7 +853,10 @@
         color: white;
         height: 100vh;
         display: grid;
-        align-content: center;
+        // align-content: center;
+        position: relative;
+        text-align: center;
+
 
         video {
             width: 100%;
@@ -857,24 +864,34 @@
             height: 100%;
             object-fit: cover;
             /* 비디오 비율을 유지하면서 영역을 채움 */
-            filter: brightness(100%) contrast(80%);
+            // filter: brightness(100%) contrast(80%);
         }
 
-        p {
-            font-size: 18px;
+        .copyright_text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            color: white;
 
-            @media (max-width:555px) {
-                font-size: 12px;
+            p {
+                font-size: 18px;
+
+                @media (max-width:555px) {
+                    font-size: 12px;
+                }
+            }
+
+            span {
+                color: #999999;
+
+                @media (max-width:555px) {
+                    font-size: 12px;
+                }
             }
         }
 
-        span {
-            color: #999999;
-
-            @media (max-width:555px) {
-                font-size: 12px;
-            }
-        }
     }
 
 }

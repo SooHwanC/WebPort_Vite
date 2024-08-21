@@ -178,6 +178,17 @@ const CircularSlider = () => {
         setOpenModal(null);
     }
 
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 1000);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 1000);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
 
     return (
         <div className="slider">
@@ -185,22 +196,46 @@ const CircularSlider = () => {
                 <div className="wrapper">
                     <div className="descriptions">
                         {slides.map((slide, index) => (
-                            <div
-                                key={index}
-                                className={`descriptions__item ${index === currentSlide ? 'descriptions__item_visible' : ''}`}
-                            >
-                                <div className="tech_stacks_wrapper">
-                                    {slide.tech_stacks.map((tech_stack, index) => (
-                                        <div key={index} className="tech_stack">{tech_stack}</div>
-                                    ))}
-                                </div>
-                                <h2 className={slide.name}>{slide.sub_title}</h2>
-                                <h1 className={slide.name} dangerouslySetInnerHTML={{ __html: slide.title }}></h1>
+                            <>
+                                {isMobile ? (
+                                    <div
+                                        key={index}
+                                        className={`descriptions__item_mobile ${index === currentSlide ? 'descriptions__item_mobile_visible' : ''}`}
+                                    >
+                                        <div className="description_mobile_leftwrapper">
+                                            <h2 className={slide.name}>{slide.sub_title}</h2>
+                                            <h1 className={slide.name} dangerouslySetInnerHTML={{ __html: slide.title }}></h1>
+                                        </div>
+                                        <div className="description_mobile_rightwrapper">
+                                            <div className="tech_stacks_wrapper">
+                                                {slide.tech_stacks.map((tech_stack, index) => (
+                                                    <div key={index} className="tech_stack">{tech_stack}</div>
+                                                ))}
+                                            </div>
+                                            <div className="detail_btn_wrapper">
+                                                <div className="detail_btn" onClick={() => openModalForSlide(index)}>Detail</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <div
+                                        key={index}
+                                        className={`descriptions__item ${index === currentSlide ? 'descriptions__item_visible' : ''}`}
+                                    >
+                                        <div className="tech_stacks_wrapper">
+                                            {slide.tech_stacks.map((tech_stack, index) => (
+                                                <div key={index} className="tech_stack">{tech_stack}</div>
+                                            ))}
+                                        </div>
+                                        <h2 className={slide.name}>{slide.sub_title}</h2>
+                                        <h1 className={slide.name} dangerouslySetInnerHTML={{ __html: slide.title }}></h1>
+                                        <div className="detail_btn_wrapper">
+                                            <div className="detail_btn" onClick={() => openModalForSlide(index)}>Detail</div>
+                                        </div>
+                                    </div>
 
-                                <div className="detail_btn_wrapper">
-                                    <div className="detail_btn" onClick={() => openModalForSlide(index)}>Detail</div>
-                                </div>
-                            </div>
+                                )}
+                            </>
                         ))}
 
                     </div>

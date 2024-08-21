@@ -86,6 +86,7 @@
                 @media (max-width: 1000px) {
                     width: 100%;
                     height: 50%;
+                    padding-left: 0;
                 }
 
 
@@ -126,7 +127,7 @@
                     }
 
                     .javaburger {
-                        background-image: linear-gradient(90deg, rgba(249,185,57,1) 0%, rgba(228,190,112,1) 50%, rgb(223, 122, 102) 99%);
+                        background-image: linear-gradient(90deg, rgba(249, 185, 57, 1) 0%, rgba(228, 190, 112, 1) 50%, rgb(223, 122, 102) 99%);
                     }
 
                     h1 {
@@ -195,6 +196,155 @@
                             font-size: 1.5rem;
                             cursor: pointer;
 
+                        }
+                    }
+                }
+
+                .descriptions__item_mobile {
+                    position: absolute;
+                    opacity: 0;
+                    transition: opacity 0.5s ease-in-out;
+                    visibility: hidden;
+                    pointer-events: none;
+                    display: flex;
+                    /* 비활성 슬라이드 클릭 방지 */
+
+                    width: 100%;
+                    justify-content: space-evenly;
+
+                    &_visible {
+                        visibility: visible;
+                        opacity: 1;
+                        pointer-events: auto;
+                        /* 활성 슬라이드 클릭 허용 */
+                    }
+
+                    .jobtalks {
+                        background-image: linear-gradient(90deg, rgba(227, 210, 103, 1) 0%, rgba(226, 158, 87, 1) 31%, rgba(225, 100, 68, 1) 59%, rgba(193, 84, 61, 1) 99%);
+                    }
+
+                    .itty {
+                        background-image: linear-gradient(270deg, rgba(255, 255, 255, 1) 0%, rgba(24, 144, 255, 1) 100%);
+                    }
+
+                    .codebridge {
+                        background-image: linear-gradient(90deg, rgba(8, 169, 211, 1) 0%, rgba(193, 84, 61, 1) 100%);
+                    }
+
+                    .travlemaker {
+                        background-image: linear-gradient(90deg, rgb(114, 61, 158) 0%, rgba(110, 82, 194, 1) 48%, rgb(189, 185, 226) 100%);
+                    }
+
+                    .javaburger {
+                        background-image: linear-gradient(90deg, rgba(249, 185, 57, 1) 0%, rgba(228, 190, 112, 1) 50%, rgb(223, 122, 102) 99%);
+                    }
+
+                    .description_mobile_leftwrapper {
+                        h1 {
+                            font-size: 8rem;
+                            background-clip: text;
+                            -webkit-background-clip: text;
+                            color: transparent;
+                            font-weight: 700;
+
+
+                            @media (max-width:1580px) {
+                                font-size: 7rem;
+                            }
+
+                            @media (max-width:1270px) {
+                                font-size: 6rem;
+                            }
+
+                            @media (max-width: 880px) {
+                                font-size: 5rem;
+                            }
+                        }
+
+                        h2 {
+                            font-size: 4rem;
+                            margin-bottom: 1.5rem;
+                            background-clip: text;
+                            -webkit-background-clip: text;
+                            color: transparent;
+                            font-weight: 600;
+
+                            @media (max-width:1580px) {
+                                font-size: 3rem;
+                            }
+
+                            @media (max-width:1270px) {
+                                font-size: 2.5rem;
+                            }
+
+
+                            @media (max-width: 880px) {
+                                font-size: 2rem;
+                            }
+                        }
+                    }
+
+
+
+                    @media(max-width: 1000px) {
+                        margin-top: 7rem;
+                    }
+
+
+                    .description_mobile_rightwrapper {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        @media (max-width: 730px) {
+                            width: 40%;
+                        }
+
+                        .tech_stacks_wrapper {
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                            // grid-template-columns: auto auto;
+                            gap: 15px;
+                            margin-bottom: 1.5rem;
+
+                            @media (max-width: 730px) {
+                                grid-template-columns: repeat(2, 1fr);
+                            }
+
+                            .tech_stack {
+                                padding: 0.4rem 1.2rem;
+                                color: rgb(10, 205, 206);
+                                font-size: 1rem;
+                                border: 0.2rem solid rgba(10, 205, 206, 0.25);
+                                border-radius: 10rem;
+                                text-align: center;
+                            }
+                        }
+
+                        .detail_btn_wrapper {
+                            margin-top: 2rem;
+
+                            @media (max-width: 880px) {
+                                margin-top: 0;
+                            }
+
+                            .detail_btn {
+                                // width: 300px;
+                                width: 100%;
+                                height: 50px;
+                                border: 2px solid white;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 10px;
+                                font-size: 1.5rem;
+                                cursor: pointer;
+
+                                @media (max-width: 880px) {
+                                    height: 45px;
+                                }
+
+                            }
                         }
                     }
                 }
