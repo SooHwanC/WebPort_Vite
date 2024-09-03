@@ -230,7 +230,7 @@ function Main() {
             >
                 <SwiperSlide>
                     <div className="main_top_box">
-                        <video src="/main_video.mp4" autoPlay playsInline muted loop></video>
+                        <video src="/videos/main_video.webm" autoPlay playsInline muted loop></video>
                         <div className="main_top_title">
                             <h1>최수환</h1>
                             <h1>Full Stack Developer</h1>
@@ -241,7 +241,7 @@ function Main() {
                 <SwiperSlide>
                     <div className="second_block">
                         <div className="second_block_photo">
-                            <img src="/profile_pic.jpg" />
+                            <img src="/images/profile_pic.webp" alt="프로필사진" />
                         </div>
                         <div className="second_block_intro">
                             <h1>
@@ -266,19 +266,19 @@ function Main() {
                                 ...props1,
                                 transform: props1.x.to(x => `translate3d(${x}px, ${props1.y.get()}px, 0)`)
                             }}>
-                                <img src="/images/background_star.svg" alt="" />
+                                <img src="/images/background_star.svg" alt="별" />
                             </animated.div>
                             <animated.div className="img_02" {...bind2()} style={{
                                 ...props2,
                                 transform: props2.x.to(x => `translate3d(${x}px, ${props2.y.get()}px, 0)`)
                             }}>
-                                <img src="/images/background_astro.svg" alt="" />
+                                <img src="/images/background_astro.svg" alt="우주인" />
                             </animated.div>
                             <animated.div className="img_03" {...bind3()} style={{
                                 ...props3,
                                 transform: props3.x.to(x => `translate3d(${x}px, ${props3.y.get()}px, 0)`)
                             }}>
-                                <img src="/images/background_rocket.svg" alt="" />
+                                <img src="/images/background_rocket.svg" alt="로켓" />
                             </animated.div>
                         </div>
                     </div>
@@ -301,13 +301,13 @@ function Main() {
                                 </h2>
                                 <div className='right_box_logo3'>
                                     <div className='logo_box'>
-                                        <img src='/html.svg' alt='logo_html' className='tilt-animation' />
+                                        <img src='/skills/html.svg' alt='logo_html' className='tilt-animation' />
                                     </div>
                                     <div className='logo_box'>
-                                        <img src='/css.svg' alt='logo_css' className='tilt-animation' />
+                                        <img src='/skills/css.svg' alt='logo_css' className='tilt-animation' />
                                     </div>
                                     <div className='logo_box'>
-                                        <img src='/javascript.svg' alt='logo_js' className='tilt-animation' />
+                                        <img src='/skills/javascript.svg' alt='logo_js' className='tilt-animation' />
                                     </div>
                                 </div>
                                 <h2>
@@ -315,7 +315,7 @@ function Main() {
                                 </h2>
                                 <div className='right_box_logo2'>
                                     <div className='logo_box'>
-                                        <img src='/react.svg' alt='logo_react' className='tilt-animation' />
+                                        <img src='/skills/react.svg' alt='logo_react' className='tilt-animation' />
                                     </div>
                                     <div className='logo_box'>
                                         <img src='/skills/vue.svg' alt='logo_vue' className='tilt-animation' />
@@ -326,13 +326,13 @@ function Main() {
                                 </h2>
                                 <div className='right_box_logo3'>
                                     <div className='logo_box'>
-                                        <img src='/redux.svg' alt='logo_redux' className='tilt-animation' />
+                                        <img src='/skills/redux.svg' alt='logo_redux' className='tilt-animation' />
                                     </div>
                                     <div className='logo_box'>
                                         <img src='/skills/pinia.svg' alt='logo_pinia' className='tilt-animation' />
                                     </div>
                                     <div className='logo_box'>
-                                        <img src='/sass.svg' alt='logo_sass' className='tilt-animation' />
+                                        <img src='/skills/sass.svg' alt='logo_sass' className='tilt-animation' />
                                     </div>
                                 </div>
                             </div>
@@ -353,13 +353,13 @@ function Main() {
                                 </h2>
                                 <div className='right_box_logo3'>
                                     <div className='logo_box'>
-                                        <img src='/javascript.svg' alt='logo_js' className='tilt-animation' />
+                                        <img src='/skills/javascript.svg' alt='logo_js' className='tilt-animation' />
                                     </div>
                                     <div className='logo_box'>
-                                        <img src='/java.svg' alt='logo_java' className='tilt-animation' />
+                                        <img src='/skills/java.svg' alt='logo_java' className='tilt-animation' />
                                     </div>
                                     <div className='logo_box'>
-                                        <img src='/python.svg' alt='logo_python' className='tilt-animation' />
+                                        <img src='/skills/python.svg' alt='logo_python' className='tilt-animation' />
                                     </div>
                                 </div>
                                 <h2>
@@ -367,10 +367,10 @@ function Main() {
                                 </h2>
                                 <div className='right_box_logo4'>
                                     <div className='logo_box_large'>
-                                        <img src='/springboot.svg' className='large_svg' alt='logo_spb' />
+                                        <img src='/skills/springboot.svg' className='large_svg' alt='logo_spb' />
                                     </div>
                                     <div className='logo_box_large'>
-                                        <img src='/node1.svg' className='large_svg' alt='logo_node' />
+                                        <img src='/skills/node1.svg' className='large_svg' alt='logo_node' />
                                     </div>
                                     <div className='logo_box_large'>
                                         <img src='/skills/flask.svg' className='large_svg' alt='logo_flask' />
@@ -384,13 +384,13 @@ function Main() {
                                 </h2>
                                 <div className='right_box_logo3'>
                                     <div className='logo_box'>
-                                        <img src='/oracle.svg' alt='logo_oracle' className='tilt-animation' />
+                                        <img src='/skills/oracle.svg' alt='logo_oracle' className='tilt-animation' />
                                     </div>
                                     <div className='logo_box'>
-                                        <img src='/mysql.svg' alt='logo_mysql' className='tilt-animation' />
+                                        <img src='/skills/mysql.svg' alt='logo_mysql' className='tilt-animation' />
                                     </div>
                                     <div className='logo_box'>
-                                        <img src='/mongodb.svg' alt='logo_mongodb' className='tilt-animation' />
+                                        <img src='/skills/mongodb.svg' alt='logo_mongodb' className='tilt-animation' />
                                     </div>
                                 </div>
                             </div>
@@ -412,16 +412,16 @@ function Main() {
 
                                 <div className='right_box_logo4'>
                                     <div className='logo_box'>
-                                        <img src='/docker.svg' alt='logo_docker' className='tilt-animation' />
+                                        <img src='/skills/docker.svg' alt='logo_docker' className='tilt-animation' />
                                     </div>
                                     <div className='logo_box'>
-                                        <img src='/firebase.svg' alt='logo_firebase' className='tilt-animation' />
+                                        <img src='/skills/firebase.svg' alt='logo_firebase' className='tilt-animation' />
                                     </div>
                                     <div className='logo_box'>
-                                        <img src='/aws.svg' alt='logo_aws' className='tilt-animation' />
+                                        <img src='/skills/aws.svg' alt='logo_aws' className='tilt-animation' />
                                     </div>
                                     <div className='logo_box'>
-                                        <img src='/github.svg' alt='logo_github' className='tilt-animation' />
+                                        <img src='/skills/github.svg' alt='logo_github' className='tilt-animation' />
                                     </div>
                                     <div className='logo_box'>
                                         <h2>
@@ -452,7 +452,7 @@ function Main() {
 
                 <SwiperSlide>
                     <div className='copyright'>
-                        <video src="/outro.mp4" autoPlay playsInline muted loop></video>
+                        <video src="/videos/outro.webm" autoPlay playsInline muted loop></video>
                         <div className='copyright_text'>
                             <p>
                                 본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.

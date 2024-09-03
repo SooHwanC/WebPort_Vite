@@ -43,7 +43,7 @@ const IttyMoadl = ({ closeModal }) => {
 
                 <div className="modal_banner_box">
                     <div className="banner_img">
-                        <img src="/modal/itty.png" alt="itty" />
+                        <img src="/modal/itty.webp" alt="itty" />
                     </div>
                 </div>
 

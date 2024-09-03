@@ -864,7 +864,7 @@
             height: 100%;
             object-fit: cover;
             /* 비디오 비율을 유지하면서 영역을 채움 */
-            // filter: brightness(100%) contrast(80%);
+            filter: brightness(75%) contrast(100%);
         }
 
         .copyright_text {

@@ -42,7 +42,7 @@ const TravelMakerModal = ({ closeModal }) => {
         </div>
         <div className="modal_banner_box">
           <div className="banner_img">
-            <img src="/modal/travelmaker.png" alt="travelmaker" />
+            <img src="/modal/travelmaker.webp" alt="travelmaker" />
           </div>
         </div>
         <div className="modal_detail_wrapper">

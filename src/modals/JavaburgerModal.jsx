@@ -33,7 +33,7 @@ const JavaburgerModal = ({ closeModal }) => {
         <div className='modal_main_wrapper' ref={modalRef} onClick={handleClickOutside}>
             <div className="modal_main_box" ref={modalInnerRef} onClick={(e) => e.stopPropagation()}>
                 <div className="close_btn_box">
-                    <img src="/images/modal_close.svg" alt="close" onClick={closeModal} />
+                    <img src="/modal/modal_close.svg" alt="close" onClick={closeModal} />
                 </div>
                 <div className="modal_title_box">
                     <h5>
@@ -43,82 +43,69 @@ const JavaburgerModal = ({ closeModal }) => {
 
                 <div className="modal_banner_box">
                     <div className="banner_img">
-                        <img src="/itty.png" alt="" />
+                        <img src="/modal/javaburger.webp" alt="javaburger" />
                     </div>
                 </div>
 
                 <div className="modal_detail_wrapper">
+                    <hr />
                     <h6>
                         서비스 소개
                     </h6>
+                    <hr />
                     <div className='modal_detail_box'>
                         <p>
-                            🔊 IT 업계에서 일하는, 공부하는 사람들을 위한 소통 커뮤니티
+                            햄버거를 만들어 사람들에게 행복을 전달하는 본격! 햄버거 타이쿤 JAVA BURGER💚
                         </p>
                         <p>
-                            📚 흩어져 있는 프로젝트, 스터디 팀원들을 쉽게 구할 수 있는 스터디 & 프로젝트 구해요 게시판
+                            - ⌚ 난이도마다 달라지는 레시피, 시간 제한! 스릴 만점 게임 구현 ✔
                         </p>
                         <p>
-                            💰 다양한 중고 물품들을 쉽고 빠르게 거래할 수 있는 중고장터 게시판
+                            - 🍔 실시간으로 만들어지는 햄버거 애니메이션, 진짜보다 더 진짜 같다!
                         </p>
                         <p>
-                            🎃 언제든, 무슨 이야기든 자유롭게 나누고 대화하는 자유게시판
+                            - ✌🏻 2가지 게임모드, 키보드 버전과 마우스 버전! 두 가지 재미를 동시에!
                         </p>
                         <p>
-                            💡 IT 꿀팁, 궁금한 점을 바로 질문하고 공유하는 팁 공유, QnA 게시판
+                            - 💛 랭킹 확인을 통해 나의 점수를 실시간으로 확인한다! 나는 과연 몇 등? 🔎
                         </p>
                         <p>
-                            ✨ "이거.. 제가 개발했어요" 자신의 개발 포트폴리오를 공유하는 포트폴리오 게시판
+                            - 💡 게임의 사운드는 찰져야 제 맛, 타이쿤의 묘미는 사운드! 📣
                         </p>
                         <p>
-                            😎 "제 점수는요.." 수강했던 IT 학원의 후기를 솔직하게 공유하는 수료생후기 게시판
+                            - 🙆‍♀️ 아기자기한 화면 구현을 통해 사람들의 즐거움을 배로! 😄👍
                         </p>
-                        <p>
-                            🔥 요즘 가장 핫한 기능, 익명 게시판을 구현했다! 모든 비밀이 오가는 익명 게시판
-                        </p>
-
-
                     </div>
 
                 </div>
 
                 <div className="modal_what_do_warpper">
+                    <hr />
                     <h6>
                         담당 기능
                     </h6>
+                    <hr />
                     <div className='modal_what_do_box'>
                         <p>
-                            • MongoDB 환경구축
+                            • 햄버거 Making 로직
                         </p>
                         <p>
-                            • 랜더링 시간 최적화 (2초 → 0.5초)
+                            • 난이도 별 레시피
                         </p>
                         <p>
-                            • 1:1쪽지 기능
+                            • 키보드 모드, 마우스 모드
                         </p>
                         <p>
-                            • 게시글 검색
+                            • 난이도 별 손님
                         </p>
                         <p>
-                            • 댓글, 대댓글
+                            • 시간 제한
                         </p>
                         <p>
-                            • 익명 기능구현
+                            • 랭킹 등록
                         </p>
                         <p>
-                            • Text Editor (Quill) + 이미지 드래그 앤 드롭
-                        </p>
-                        <p>
-                            • FireBase 이미지 호스팅
-                        </p>
-                        <p>
-                            • 이미지 크롭 (React Cropper)
-                        </p>
-                        <p>
-                            • Swiper 기능구현 (드래그 스크롤)
-                        </p>
-                        <p>
-                            • 배포
+                            • bgm
                         </p>
                     </div>
                 </div>
