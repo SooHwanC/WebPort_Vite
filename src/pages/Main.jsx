@@ -230,7 +230,7 @@ function Main() {
             >
                 <SwiperSlide>
                     <div className="main_top_box">
-                        <video src="/videos/main_video.webm" autoPlay playsInline muted loop></video>
+                        <video src="/videos/main_video.webm" preload="auto" autoPlay playsInline muted loop></video>
                         <div className="main_top_title">
                             <h1>최수환</h1>
                             <h1>Full Stack Developer</h1>
