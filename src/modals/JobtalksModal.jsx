@@ -43,7 +43,7 @@ const JobtalksModal = ({ closeModal }) => {
 
                 <div className="modal_banner_box">
                     <div className="banner_img">
-                        <img src="/modal/jobtalks.webp" alt="jobtalks" />
+                        <img src="/modal/jobtalks.png" alt="jobtalks" />
                     </div>
                 </div>
                 <div className="modal_detail_wrapper">

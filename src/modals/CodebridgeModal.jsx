@@ -42,7 +42,7 @@ const CodebridgeModal = ({ closeModal }) => {
         </div>
         <div className="modal_banner_box">
           <div className="banner_img">
-            <img src="/modal/codebridge.webp" alt="codebridge" />
+            <img src="/modal/codebridge.svg" alt="codebridge" />
           </div>
         </div>
         <div className="modal_detail_wrapper">
