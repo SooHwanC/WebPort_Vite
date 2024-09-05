@@ -61,9 +61,10 @@
                 }
 
                 @media (max-width:555px) {
-                    font-size: 1rem;
+                    font-size: 0.8rem;
                     width: 55px;
                 }
+
             }
 
             .active-menu-item {
@@ -73,7 +74,7 @@
                 color: #A2C5F4;
 
                 @media (max-width:555px) {
-                    font-size: 1.2rem;
+                    font-size: 0.9rem;
                 }
             }
 
@@ -145,6 +146,10 @@
             h1 {
                 font-family: 'JalnanGothic';
                 font-size: 4rem;
+
+                @media(max-width: 600px) {
+                    font-size: 3rem;
+                }
             }
         }
     }

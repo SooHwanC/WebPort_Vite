@@ -240,6 +240,11 @@
                     }
 
                     .description_mobile_leftwrapper {
+
+                        @media (max-width: 600px) {
+                            width: 80%;
+                        }
+
                         h1 {
                             font-size: 8rem;
                             background-clip: text;
@@ -259,6 +264,10 @@
                             @media (max-width: 880px) {
                                 font-size: 5rem;
                             }
+
+                            @media(max-width: 600px) {
+                                font-size: 3rem;
+                            }
                         }
 
                         h2 {
@@ -277,9 +286,12 @@
                                 font-size: 2.5rem;
                             }
 
-
                             @media (max-width: 880px) {
                                 font-size: 2rem;
+                            }
+
+                            @media(max-width: 600px) {
+                                font-size: 1.5rem;
                             }
                         }
                     }
@@ -298,6 +310,10 @@
 
                         @media (max-width: 730px) {
                             width: 40%;
+                        }
+
+                        @media (max-width: 600px) {
+                            display: none;
                         }
 
                         .tech_stacks_wrapper {
