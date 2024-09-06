@@ -423,7 +423,7 @@ function Main() {
                                     <div className='logo_box'>
                                         <img src='/skills/github.svg' alt='logo_github' className='tilt-animation' />
                                     </div>
-                                    <div className='logo_box'>
+                                    {/* <div className='logo_box'>
                                         <h2>
                                             LLM
                                         </h2>
@@ -443,7 +443,7 @@ function Main() {
                                         <h2>
                                             Vllm
                                         </h2>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
