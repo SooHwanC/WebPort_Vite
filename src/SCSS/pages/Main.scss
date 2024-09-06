@@ -43,7 +43,7 @@
             display: flex;
             align-items: center;
 
-            
+
             li {
                 font-family: 'SUIT Variable';
                 // font-family: 'GangwonEduPowerExtraBoldA';
@@ -106,8 +106,8 @@
                 margin-right: 1rem;
 
                 @media(max-width: 500px) {
-                    width: 85%;
-                    height: 85%;
+                    width: 80%;
+                    height: 80%;
                 }
             }
         }
@@ -304,21 +304,34 @@
                     font-size: 3rem;
                     margin-bottom: 2rem;
 
-                    @media(max-width :1024px) {
+
+
+
+                    @media(max-width :1700px) {
                         font-size: 2.5rem;
                     }
 
                     @media(max-width :768px) {
                         font-size: 2rem;
                     }
+
+                    @media(max-width :600px) {
+                        font-size: 1.6rem;
+                    }
                 }
 
                 .right_box_logo4 {
                     display: grid;
-                    grid-template-columns: 1fr 1fr;
+                    grid-template-columns: repeat(auto-fill, minmax(20%, auto));
+                    // grid-template-columns: repeat(4, 1fr);
                     margin: 0 auto;
-                    width: 80%;
-                    gap: 2rem;
+                    width: 95%;
+                    // gap: 2rem;
+
+                    @media(max-width:1700px) {
+                        grid-template-columns: repeat(2, 1fr);
+                        row-gap: 2rem;
+                    }
 
                     @media(max-width:768px) {
                         grid-template-columns: 1fr 1fr;
@@ -345,11 +358,7 @@
                 }
 
 
-                .right_box_logo4 {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr 1fr 1fr;
-                    margin-bottom: 1rem;
-                }
+
 
                 .right_box_logo2 {
                     display: grid;
@@ -391,9 +400,15 @@
                     height: 150px;
                     margin: 0 auto;
 
-                    @media(max-width:1024px) {
+
+                    @media(max-width:1700px) {
                         width: 100px;
                         height: 100px;
+                    }
+
+                    @media(max-width:900px) {
+                        width: 80px;
+                        height: 80px;
                     }
 
                     @media(max-height:750px) {
@@ -401,7 +416,7 @@
                         height: 70px;
                     }
 
-                    @media(max-width:530px) {
+                    @media(max-width:600px) {
                         width: 80px;
                         height: 80px;
                     }
@@ -421,6 +436,11 @@
                     width: 200px;
                     height: 100px;
                     margin: 0 auto;
+
+                    @media(max-width:900px) {
+                        width: 80px;
+                        height: 80px;
+                    }
 
                     @media(max-width:768px) {
                         width: 125px;

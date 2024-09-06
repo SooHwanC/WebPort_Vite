@@ -301,13 +301,13 @@ function Main() {
                                 </h2>
                                 <div className='right_box_logo3'>
                                     <div className='logo_box'>
-                                        <img src='/skills/html.svg' alt='logo_html' className='tilt-animation' />
+                                        <img src='/skills/HTML.svg' alt='logo_html' className='tilt-animation' />
                                     </div>
                                     <div className='logo_box'>
-                                        <img src='/skills/css.svg' alt='logo_css' className='tilt-animation' />
+                                        <img src='/skills/Css.svg' alt='logo_css' className='tilt-animation' />
                                     </div>
                                     <div className='logo_box'>
-                                        <img src='/skills/javascript.svg' alt='logo_js' className='tilt-animation' />
+                                        <img src='/skills/JavaScript.svg' alt='logo_js' className='tilt-animation' />
                                     </div>
                                 </div>
                                 <h2>
@@ -315,10 +315,10 @@ function Main() {
                                 </h2>
                                 <div className='right_box_logo2'>
                                     <div className='logo_box'>
-                                        <img src='/skills/react.svg' alt='logo_react' className='tilt-animation' />
+                                        <img src='/skills/React.svg' alt='logo_react' className='tilt-animation' />
                                     </div>
                                     <div className='logo_box'>
-                                        <img src='/skills/vue.svg' alt='logo_vue' className='tilt-animation' />
+                                        <img src='/skills/Vue.svg' alt='logo_vue' className='tilt-animation' />
                                     </div>
                                 </div>
                                 <h2>
@@ -326,10 +326,10 @@ function Main() {
                                 </h2>
                                 <div className='right_box_logo3'>
                                     <div className='logo_box'>
-                                        <img src='/skills/redux.svg' alt='logo_redux' className='tilt-animation' />
+                                        <img src='/skills/Redux.svg' alt='logo_redux' className='tilt-animation' />
                                     </div>
                                     <div className='logo_box'>
-                                        <img src='/skills/pinia.svg' alt='logo_pinia' className='tilt-animation' />
+                                        <img src='/skills/Pinia.svg' alt='logo_pinia' className='tilt-animation' />
                                     </div>
                                     <div className='logo_box'>
                                         <img src='/skills/sass.svg' alt='logo_sass' className='tilt-animation' />
@@ -353,10 +353,10 @@ function Main() {
                                 </h2>
                                 <div className='right_box_logo3'>
                                     <div className='logo_box'>
-                                        <img src='/skills/javascript.svg' alt='logo_js' className='tilt-animation' />
+                                        <img src='/skills/JavaScript.svg' alt='logo_js' className='tilt-animation' />
                                     </div>
                                     <div className='logo_box'>
-                                        <img src='/skills/java.svg' alt='logo_java' className='tilt-animation' />
+                                        <img src='/skills/Java.svg' alt='logo_java' className='tilt-animation' />
                                     </div>
                                     <div className='logo_box'>
                                         <img src='/skills/python.svg' alt='logo_python' className='tilt-animation' />
@@ -367,16 +367,16 @@ function Main() {
                                 </h2>
                                 <div className='right_box_logo4'>
                                     <div className='logo_box_large'>
-                                        <img src='/skills/springboot.svg' className='large_svg' alt='logo_spb' />
+                                        <img src='/skills/SpringBoot.svg' className='large_svg' alt='logo_spb' />
                                     </div>
                                     <div className='logo_box_large'>
-                                        <img src='/skills/node1.svg' className='large_svg' alt='logo_node' />
+                                        <img src='/skills/nodejs.svg' className='large_svg' alt='logo_node' />
                                     </div>
                                     <div className='logo_box_large'>
-                                        <img src='/skills/flask.svg' className='large_svg' alt='logo_flask' />
+                                        <img src='/skills/Flask.svg' className='large_svg' alt='logo_flask' />
                                     </div>
                                     <div className='logo_box_large'>
-                                        <img src='/skills/fastapi.svg' className='large_svg' alt='logo_fastapi' />
+                                        <img src='/skills/FastAPI.svg' className='large_svg' alt='logo_fastapi' />
                                     </div>
                                 </div>
                                 <h2>
@@ -384,13 +384,13 @@ function Main() {
                                 </h2>
                                 <div className='right_box_logo3'>
                                     <div className='logo_box'>
-                                        <img src='/skills/oracle.svg' alt='logo_oracle' className='tilt-animation' />
+                                        <img src='/skills/OracleDB.svg' alt='logo_oracle' className='tilt-animation' />
                                     </div>
                                     <div className='logo_box'>
-                                        <img src='/skills/mysql.svg' alt='logo_mysql' className='tilt-animation' />
+                                        <img src='/skills/MySQL.svg' alt='logo_mysql' className='tilt-animation' />
                                     </div>
                                     <div className='logo_box'>
-                                        <img src='/skills/mongodb.svg' alt='logo_mongodb' className='tilt-animation' />
+                                        <img src='/skills/mongoDB.svg' alt='logo_mongodb' className='tilt-animation' />
                                     </div>
                                 </div>
                             </div>
@@ -414,14 +414,14 @@ function Main() {
                                     <div className='logo_box'>
                                         <img src='/skills/docker.svg' alt='logo_docker' className='tilt-animation' />
                                     </div>
-                                    <div className='logo_box'>
+                                    {/* <div className='logo_box'>
                                         <img src='/skills/firebase.svg' alt='logo_firebase' className='tilt-animation' />
-                                    </div>
+                                    </div> */}
                                     <div className='logo_box'>
                                         <img src='/skills/aws.svg' alt='logo_aws' className='tilt-animation' />
                                     </div>
                                     <div className='logo_box'>
-                                        <img src='/skills/github.svg' alt='logo_github' className='tilt-animation' />
+                                        <img src='/skills/GitHub.svg' alt='logo_github' className='tilt-animation' />
                                     </div>
                                     {/* <div className='logo_box'>
                                         <h2>

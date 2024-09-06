@@ -105,20 +105,25 @@ const CircularSlider = () => {
             console.log('wrapperHeight:', wrapperHeight);
             // 너비와 높이 중 작은 값을 기준으로 슬라이더 크기 결정
             const minDimension = Math.min(wrapperWidth, wrapperHeight);
-            return Math.min(minDimension * 1.1, 900);
+
+            if (Math.min(minDimension * 1.1, 900) < 453.2) {
+                return 453.2;
+            } else {
+                return Math.min(minDimension * 1.1, 900);
+            }
         }
         return 800; // 기본값
     };
 
-    useEffect(() => {
-        const handleResize = () => {
-            setSliderSize(calculateSliderSize());
-        };
+    // useEffect(() => {
+    //     const handleResize = () => {
+    //         setSliderSize(calculateSliderSize());
+    //     };
 
-        handleResize();
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
+    //     handleResize();
+    //     window.addEventListener('resize', handleResize);
+    //     return () => window.removeEventListener('resize', handleResize);
+    // }, []);
 
 
     useEffect(() => {
@@ -216,6 +221,10 @@ const CircularSlider = () => {
                                                 <div className="detail_btn" onClick={() => openModalForSlide(index)}>Detail</div>
                                             </div>
                                         </div>
+
+                                        <div className="detail_btn_wrapper_mobile">
+                                            <div className="detail_btn" onClick={() => openModalForSlide(index)}>Detail</div>
+                                        </div>
                                     </div>
                                 ) : (
                                     <div
@@ -246,6 +255,8 @@ const CircularSlider = () => {
                                 width: `${sliderSize}px`,
                                 height: `${sliderSize}px`,
                                 transform: rotate.to(r => `translate(0%, 0%) rotate(${r}deg)`),
+                                minHeight: '453.2px',
+                                minWidth: '453.2px',
                             }}
                         >
                             {slides.map((slide, index) => {
@@ -296,6 +307,8 @@ const CircularSlider = () => {
                                     top: '50%',
                                     left: '50%',
                                     transform: 'translate(-50%, -50%)',
+                                    minHeight: '226.6px',
+                                    minWidth: '226.6px',
                                 }}
                             >
                                 {/* <img src="../slider/test_02.svg" alt="" style={{ */}
