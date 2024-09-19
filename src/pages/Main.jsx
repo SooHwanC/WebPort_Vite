@@ -410,7 +410,7 @@ function Main() {
                                     Etc
                                 </h2>
 
-                                <div className='right_box_logo4'>
+                                <div className='right_box_logo3'>
                                     <div className='logo_box'>
                                         <img src='/skills/docker.svg' alt='logo_docker' className='tilt-animation' />
                                     </div>
