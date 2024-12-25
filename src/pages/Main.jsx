@@ -9,6 +9,7 @@ import JavaBurger from './JavaBurger';
 import CircularSlider from './CircleSlider_fix';
 import { useSpring, animated } from 'react-spring';
 import { useDrag } from '@use-gesture/react';
+import BackgroundEffects from '../components/BackgroundEffects/BackgroundEffects';
 
 function Main() {
 
@@ -156,6 +157,7 @@ function Main() {
 
     return (
         <div className="App">
+            <BackgroundEffects activeSlide={activeSlide} />
             {activeSlide >= 2 && activeSlide <= 6 &&
                 <div className="left_box_fixed" style={leftBoxStyle}>
                     SKILLS <br />
@@ -260,26 +262,6 @@ function Main() {
                                     #완벽주의
                                 </li>
                             </ul>
-                        </div>
-                        <div className="background_img_wrapper_02">
-                            <animated.div className="img_01" {...bind1()} style={{
-                                ...props1,
-                                transform: props1.x.to(x => `translate3d(${x}px, ${props1.y.get()}px, 0)`)
-                            }}>
-                                <img src="/images/background_star.svg" alt="별" />
-                            </animated.div>
-                            <animated.div className="img_02" {...bind2()} style={{
-                                ...props2,
-                                transform: props2.x.to(x => `translate3d(${x}px, ${props2.y.get()}px, 0)`)
-                            }}>
-                                <img src="/images/background_astro.svg" alt="우주인" />
-                            </animated.div>
-                            <animated.div className="img_03" {...bind3()} style={{
-                                ...props3,
-                                transform: props3.x.to(x => `translate3d(${x}px, ${props3.y.get()}px, 0)`)
-                            }}>
-                                <img src="/images/background_rocket.svg" alt="로켓" />
-                            </animated.div>
                         </div>
                     </div>
                 </SwiperSlide >
@@ -423,27 +405,6 @@ function Main() {
                                     <div className='logo_box'>
                                         <img src='/skills/github.svg' alt='logo_github' className='tilt-animation' />
                                     </div>
-                                    {/* <div className='logo_box'>
-                                        <h2>
-                                            LLM
-                                        </h2>
-                                    </div>
-                                    <div className='logo_box'>
-                                        <h2>
-                                            Axolotl
-                                        </h2>
-                                    </div>
-                                    <div className='logo_box'>
-                                        <h2>
-                                            STT
-                                            (Whisper)
-                                        </h2>
-                                    </div>
-                                    <div className='logo_box'>
-                                        <h2>
-                                            Vllm
-                                        </h2>
-                                    </div> */}
                                 </div>
                             </div>
                         </div>
