@@ -157,6 +157,14 @@ function Main() {
         setIsChatOpen(!isChatOpen);
     };
 
+    // 첫 화면은 이미지로 보여주고, 동영상은 백그라운드에서 로드
+    const [showVideo, setShowVideo] = useState(false);
+
+    useEffect(() => {
+        const video = document.createElement('video');
+        video.src = "/videos/main_video.webm";
+        video.onloadeddata = () => setShowVideo(true);
+    }, []);
 
 
     return (
@@ -236,7 +244,16 @@ function Main() {
             >
                 <SwiperSlide>
                     <div className="main_top_box">
-                        <video src="/videos/main_video.webm" preload="auto" autoPlay playsInline muted loop></video>
+                        {!showVideo ? (
+                            // 고화질 스틸 이미지 (동영상의 첫 프레임을 이미지로 저장)
+                            <img
+                                src="/images/prevideoimg.webp"
+                                alt="메인 이미지"
+                                className="full-screen-image"
+                            />
+                        ) : (
+                            <video src="/videos/main_video.webm" autoPlay playsInline muted loop />
+                        )}
                         <div className="main_top_title">
                             <h1>최수환</h1>
                             <h1>Full Stack Developer</h1>
