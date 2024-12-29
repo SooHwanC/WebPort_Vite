@@ -175,14 +175,25 @@ const CircularSlider = () => {
 
     const [openModal, setOpenModal] = useState(null);
 
+    const [swiperInstance, setSwiperInstance] = useState(null);
+
+    // 2. openModalForSlide 함수 수정
     const openModalForSlide = (slideIndex) => {
         setOpenModal(slideIndex);
+        const mainSwiper = document.querySelector('.mySwiper').swiper;
+        if (mainSwiper) {
+            mainSwiper.mousewheel.disable();
+        }
     }
 
+    // 3. closeModal 함수 수정
     const closeModal = () => {
         setOpenModal(null);
+        const mainSwiper = document.querySelector('.mySwiper').swiper;
+        if (mainSwiper) {
+            mainSwiper.mousewheel.enable();
+        }
     }
-
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 1000);
 
     useEffect(() => {

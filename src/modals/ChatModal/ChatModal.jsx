@@ -40,9 +40,11 @@ const ChatModal = ({ isOpen, onToggle }) => {
         };
     }, [isOpen, onToggle]);
 
+    const [currentResponse, setCurrentResponse] = useState('');  // 현재 응답 상태 추가
+
     const callLLM = async (userMessage) => {
         try {
-            const response = await fetch('http://localhost:5004/callLLM', {
+            const response = await fetch('https://monitor-faithful-slightly.ngrok-free.app/callLLM', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -60,41 +62,56 @@ const ChatModal = ({ isOpen, onToggle }) => {
             const reader = response.body.getReader();
             setIsLoading(true);
 
-            let previousText = '';
-
+            // 새로운 bot 메시지를 위한 공간 생성
             setChatHistory(prev => [...prev, { type: 'bot', content: '' }]);
+            setCurrentResponse('');  // 현재 응답 초기화
 
             while (true) {
                 const { value, done } = await reader.read();
                 if (done) break;
 
                 const chunk = new TextDecoder().decode(value);
+                const lines = chunk.split('\n');
 
-                if (chunk === '[END]' || chunk.includes('[END]')) {
-                    // [END] 메시지를 제외한 나머지 텍스트만 처리
-                    const finalText = chunk.replace('[END]', '').trim();
-                    if (finalText) {
-                        const newText = finalText.slice(previousText.length);
-                        setChatHistory(prev => {
-                            const newHistory = [...prev];
-                            const lastMessage = newHistory[newHistory.length - 1];
-                            lastMessage.content += newText;
-                            return newHistory;
+                for (const line of lines) {
+                    if (!line.trim()) continue;
+
+                    try {
+                        const data = JSON.parse(line);
+                        // console.log("받은 토큰:", data.token);  // 디버깅용
+
+                        if (data.error) {
+                            throw new Error(data.token.slice(7));
+                        }
+
+                        if (data.token === '[END]' || data.finished) {
+                            // 마지막 메시지를 완성된 응답으로 업데이트
+                            setChatHistory(prev => {
+                                const newHistory = [...prev];
+                                newHistory[newHistory.length - 1].content = currentResponse;
+                                return newHistory;
+                            });
+                            setIsLoading(false);
+                            break;
+                        }
+
+                        // 현재 응답 업데이트
+                        setCurrentResponse(prev => {
+                            const newResponse = data.token;
+                            // 채팅 히스토리도 함께 업데이트
+                            setChatHistory(prev => {
+                                const newHistory = [...prev];
+                                newHistory[newHistory.length - 1].content = newResponse;
+                                console.log("newHistory : ", newHistory);
+                                return newHistory;
+                            });
+                            return newResponse;
                         });
-                    }
-                    break;
-                } else if (chunk.startsWith('[ERROR]')) {
-                    throw new Error(chunk.slice(7));
-                } else {
-                    const newText = chunk.slice(previousText.length);
-                    previousText = chunk;
 
-                    setChatHistory(prev => {
-                        const newHistory = [...prev];
-                        const lastMessage = newHistory[newHistory.length - 1];
-                        lastMessage.content += newText;
-                        return newHistory;
-                    });
+
+                    } catch (parseError) {
+                        console.error('JSON 파싱 에러:', parseError, 'Line:', line);
+                    }
                 }
             }
         } catch (error) {
