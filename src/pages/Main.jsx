@@ -10,12 +10,12 @@ import CircularSlider from './CircleSlider_fix';
 import { useSpring, animated } from 'react-spring';
 import { useDrag } from '@use-gesture/react';
 import BackgroundEffects from '../components/BackgroundEffects/BackgroundEffects';
+import ChatModal from '../modals/ChatModal/ChatModal';
 
 function Main() {
 
-
-
     const [activeSlide, setActiveSlide] = useState(0);
+    const [isChatOpen, setIsChatOpen] = useState(false);
 
     const handleSlideChange = (swiper) => {
         setActiveSlide(swiper.activeIndex);
@@ -152,6 +152,10 @@ function Main() {
             config: { velocity: [vx * 0.5, vy * 0.5] }  // 속도도 조정
         })
     );
+
+    const toggleChat = () => {
+        setIsChatOpen(!isChatOpen);
+    };
 
 
 
@@ -429,6 +433,7 @@ function Main() {
 
 
             </Swiper >
+            <ChatModal isOpen={isChatOpen} onToggle={toggleChat} />
         </div >
     );
 }
