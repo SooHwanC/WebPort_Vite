@@ -177,23 +177,31 @@ const CircularSlider = () => {
 
     const [swiperInstance, setSwiperInstance] = useState(null);
 
-    // 2. openModalForSlide 함수 수정
+    // CircularSlider.jsx
     const openModalForSlide = (slideIndex) => {
         setOpenModal(slideIndex);
         const mainSwiper = document.querySelector('.mySwiper').swiper;
         if (mainSwiper) {
+            // 모든 인터랙션 비활성화
             mainSwiper.mousewheel.disable();
+            mainSwiper.allowTouchMove = false;  // 터치/드래그 비활성화
+            mainSwiper.allowSlideNext = false;  // 다음 슬라이드로 이동 비활성화
+            mainSwiper.allowSlidePrev = false;  // 이전 슬라이드로 이동 비활성화
         }
     }
 
-    // 3. closeModal 함수 수정
     const closeModal = () => {
         setOpenModal(null);
         const mainSwiper = document.querySelector('.mySwiper').swiper;
         if (mainSwiper) {
+            // 모든 인터랙션 다시 활성화
             mainSwiper.mousewheel.enable();
+            mainSwiper.allowTouchMove = true;   // 터치/드래그 활성화
+            mainSwiper.allowSlideNext = true;   // 다음 슬라이드로 이동 활성화
+            mainSwiper.allowSlidePrev = true;   // 이전 슬라이드로 이동 활성화
         }
     }
+    
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 1000);
 
     useEffect(() => {
