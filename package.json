@@ -13,8 +13,10 @@
     "@use-gesture/react": "^10.3.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-markdown": "^9.0.1",
     "react-router-dom": "^6.26.0",
     "react-spring": "^9.7.4",
+    "remark-gfm": "^4.0.0",
     "sass": "^1.77.8",
     "swiper": "^11.1.9"
   },

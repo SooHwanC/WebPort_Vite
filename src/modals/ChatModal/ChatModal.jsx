@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import './ChatModal.scss';
 
 const ChatModal = ({ isOpen, onToggle }) => {
     const [message, setMessage] = useState('');
     const modalRef = useRef(null);
     const [chatHistory, setChatHistory] = useState([
-        { type: 'bot', content: '안녕하세요! 무엇을 도와드릴까요?' }
+        { type: 'bot', content: '안녕하세요! 최수환 입니다. 저에 대해 궁금한 점이 있으신가요?' }
     ]);
     const [isLoading, setIsLoading] = useState(false);
     const chatAreaRef = useRef(null);
@@ -60,7 +62,7 @@ const ChatModal = ({ isOpen, onToggle }) => {
             if (!response.ok) throw new Error('API 요청 실패');
 
             const reader = response.body.getReader();
-            setIsLoading(true);
+            // setIsLoading(true);
 
             // 새로운 bot 메시지를 위한 공간 생성
             setChatHistory(prev => [...prev, { type: 'bot', content: '' }]);
@@ -84,25 +86,26 @@ const ChatModal = ({ isOpen, onToggle }) => {
                             throw new Error(data.token.slice(7));
                         }
 
-                        if (data.token === '[END]' || data.finished) {
-                            // 마지막 메시지를 완성된 응답으로 업데이트
-                            setChatHistory(prev => {
-                                const newHistory = [...prev];
-                                newHistory[newHistory.length - 1].content = currentResponse;
-                                return newHistory;
-                            });
-                            setIsLoading(false);
-                            break;
-                        }
+                        // if (data.token === '[END]' || data.finished) {
+                        //     // 마지막 메시지를 완성된 응답으로 업데이트
+                        //     setChatHistory(prev => {
+                        //         const newHistory = [...prev];
+                        //         newHistory[newHistory.length - 1].content = currentResponse;
+                        //         return newHistory;
+                        //     });
+                        //     setIsLoading(false);
+                        //     break;
+                        // }
 
                         // 현재 응답 업데이트
                         setCurrentResponse(prev => {
                             const newResponse = data.token;
+                            // console.log("newResponse : ", newResponse);
                             // 채팅 히스토리도 함께 업데이트
                             setChatHistory(prev => {
                                 const newHistory = [...prev];
                                 newHistory[newHistory.length - 1].content = newResponse;
-                                console.log("newHistory : ", newHistory);
+                                // console.log("newHistory : ", newHistory);
                                 return newHistory;
                             });
                             return newResponse;
@@ -164,14 +167,35 @@ const ChatModal = ({ isOpen, onToggle }) => {
                 <div className="modal-overlay">
                     <div className="modal-container" ref={modalRef}>
                         <div className="modal-header">
-                            <h2>LLM과 대화하기</h2>
+                            <h2>최수환 Bot</h2>
                             <button onClick={onToggle}>✕</button>
                         </div>
 
                         <div className="chat-area" ref={chatAreaRef}>
                             {chatHistory.map((chat, index) => (
                                 <div key={index} className={`message ${chat.type}`}>
-                                    {chat.content}
+                                    {chat.type === 'bot' ? (
+                                        <ReactMarkdown
+                                            remarkPlugins={[remarkGfm]}
+                                            components={{
+                                                a: ({ node, children, href, ...props }) => (
+                                                    <a
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        href={href}
+                                                        title={href}  // 호버 시 URL 표시
+                                                        {...props}
+                                                    >
+                                                        {children} ({new URL(href).hostname})
+                                                    </a>
+                                                )
+                                            }}
+                                        >
+                                            {chat.content}
+                                        </ReactMarkdown>
+                                    ) : (
+                                        chat.content
+                                    )}
                                 </div>
                             ))}
                             {isLoading && (
