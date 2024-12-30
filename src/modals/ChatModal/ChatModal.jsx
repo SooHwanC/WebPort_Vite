@@ -183,7 +183,7 @@ const ChatModal = ({ isOpen, onToggle }) => {
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                         href={href}
-                                                        title={href}  // 호버 시 URL 표시
+                                                        title={href} 
                                                         {...props}
                                                     >
                                                         {children} ({new URL(href).hostname})
