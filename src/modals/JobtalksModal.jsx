@@ -46,6 +46,11 @@ const JobtalksModal = ({ closeModal }) => {
                         <img src="/modal/jobtalks.webp" alt="jobtalks" />
                     </div>
                 </div>
+                <div className='modal_detail_link_box'>
+                    <a href="https://github.com/CPM-AI/jobtalks_Ocelot.git" target='_blank' rel='noreferrer'>
+                        바로가기
+                    </a>
+                </div>
                 <div className="modal_detail_wrapper">
                     <hr />
                     <h6>

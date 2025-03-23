@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import '../SCSS/modals/Modal.scss'
 
-const IttyMoadl = ({ closeModal }) => {
+const DdabongModal = ({ closeModal }) => {
 
     const modalRef = useRef(null);
     const modalInnerRef = useRef(null);
@@ -37,22 +37,20 @@ const IttyMoadl = ({ closeModal }) => {
                 </div>
                 <div className="modal_title_box">
                     <h5>
-                        ITTY
+                        DDA BONG
                     </h5>
                 </div>
 
                 <div className="modal_banner_box">
                     <div className="banner_img">
-                        <img src="/modal/itty.webp" alt="itty" />
+                        <img src="/modal/ddabong.png" alt="ddabong" />
                     </div>
                 </div>
                 <div className='modal_detail_link_box'>
-                    <a href="https://github.com/ITTYofficial/ITTY.git" target='_blank' rel='noreferrer'>
+                    <a href="https://github.com/ddab0ng/ReadMe.git" target='_blank' rel='noreferrer'>
                         바로가기
                     </a>
                 </div>
-
-
                 <div className="modal_detail_wrapper">
                     <hr />
                     <h6>
@@ -61,31 +59,11 @@ const IttyMoadl = ({ closeModal }) => {
                     <hr />
                     <div className='modal_detail_box'>
                         <p>
-                            🔊 IT 업계에서 일하는, 공부하는 사람들을 위한 소통 커뮤니티
+                            최신 RAG(Retrieval-Augmented Generation) 기술을 활용한 고성능 챗봇 서비스
                         </p>
                         <p>
-                            📚 흩어져 있는 프로젝트, 스터디 팀원들을 쉽게 구할 수 있는 스터디 & 프로젝트 구해요 게시판
+                            다양한 언어 모델과 임베딩 기술을 통합하여 사용자의 질문에 대해 정확하고 신속한 답변을 제공
                         </p>
-                        <p>
-                            💰 다양한 중고 물품들을 쉽고 빠르게 거래할 수 있는 중고장터 게시판
-                        </p>
-                        <p>
-                            🎃 언제든, 무슨 이야기든 자유롭게 나누고 대화하는 자유게시판
-                        </p>
-                        <p>
-                            💡 IT 꿀팁, 궁금한 점을 바로 질문하고 공유하는 팁 공유, QnA 게시판
-                        </p>
-                        <p>
-                            ✨ "이거.. 제가 개발했어요" 자신의 개발 포트폴리오를 공유하는 포트폴리오 게시판
-                        </p>
-                        <p>
-                            😎 "제 점수는요.." 수강했던 IT 학원의 후기를 솔직하게 공유하는 수료생후기 게시판
-                        </p>
-                        <p>
-                            🔥 요즘 가장 핫한 기능, 익명 게시판을 구현했다! 모든 비밀이 오가는 익명 게시판
-                        </p>
-
-
                     </div>
 
                 </div>
@@ -97,46 +75,41 @@ const IttyMoadl = ({ closeModal }) => {
                     </h6>
                     <hr />
                     <div className='modal_what_do_box'>
-                        <p>
-                            • MongoDB 환경구축
+                        <p className='small_title'>
+                            1. 실시간 데이터 처리
                         </p>
                         <p>
-                            • 랜더링 시간 최적화 (2초 → 0.5초)
+                            • SSE(Server-Sent Events) 기반 실시간 통신
                         </p>
                         <p>
-                            • 1:1쪽지 기능
+                            • 임베딩 진행 상태 및 채팅 스트리밍
+                        </p>
+                        <p className='small_title'>
+                            2. LLM
                         </p>
                         <p>
-                            • 게시글 검색
+                            • 다중 LLM 모델 지원
                         </p>
                         <p>
-                            • 댓글, 대댓글
+                            • 오픈소스 LLM 호스팅 (vLLM)
+                        </p>
+                        <p className='small_title'>
+                            3. RAG
                         </p>
                         <p>
-                            • 익명 기능구현
+                            • 임베딩 모델 커스터마이징 기능능
                         </p>
                         <p>
-                            • Text Editor (Quill) + 이미지 드래그 앤 드롭
+                            • 검색된 청크 하이라이트 기능
                         </p>
                         <p>
-                            • FireBase 이미지 호스팅
-                        </p>
-                        <p>
-                            • 이미지 크롭 (React Cropper)
-                        </p>
-                        <p>
-                            • Swiper 기능구현 (드래그 스크롤)
-                        </p>
-                        <p>
-                            • 배포
+                            • 높은 정확도의 문서 파싱
                         </p>
                     </div>
                 </div>
-
             </div>
-
-        </div>
+        </div >
     )
 }
 
-export default IttyMoadl
+export default DdabongModal

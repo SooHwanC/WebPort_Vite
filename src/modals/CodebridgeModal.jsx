@@ -45,6 +45,11 @@ const CodebridgeModal = ({ closeModal }) => {
             <img src="/modal/codebridge.webp" alt="codebridge" />
           </div>
         </div>
+        <div className="modal_detail_link_box">
+          <a href="https://github.com/2023-SMHRD-SW-DataDesign-1/CodeBridge_Front.git" target='_blank' rel='noreferrer'>
+            바로가기
+          </a>
+        </div>
         <div className="modal_detail_wrapper">
           <hr />
           <h6>

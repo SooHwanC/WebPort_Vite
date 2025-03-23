@@ -8,6 +8,7 @@ import IttyMoadl from '../modals/IttyMoadl';
 import CodebridgeModal from '../modals/CodebridgeModal';
 import TravelmakerModal from '../modals/TravelmakerModal';
 import JavaburgerModal from '../modals/JavaburgerModal';
+import DdabongModal from '../modals/DdabongModal';
 
 const CircularSlider = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -15,6 +16,15 @@ const CircularSlider = () => {
     const slideSize = 200;
 
     const slides = [
+        {
+            image: '/slider/slide_ddabong.svg', 
+            title: 'DDABONG',
+            sub_title: '고성능 챗봇 서비스',
+            tech_stacks: [
+                'React', 'Vue3', 'Express', 'MongoDB', 'LLM', 'FineTuning', 'RAG'
+            ],
+            name: 'ddabong'
+        },
         {
             image: '/slider/slide_jobtalks.svg',
             title: 'JOB<br/>TALKS',
@@ -341,11 +351,12 @@ const CircularSlider = () => {
                     </div>
                 </div>
             </div>
-            {openModal === 0 && <JobtalksModal closeModal={closeModal} />}
-            {openModal === 1 && <IttyMoadl closeModal={closeModal} />}
-            {openModal === 2 && <CodebridgeModal closeModal={closeModal} />}
-            {openModal === 3 && <TravelmakerModal closeModal={closeModal} />}
-            {openModal === 4 && <JavaburgerModal closeModal={closeModal} />}
+            {openModal === 0 && <DdabongModal closeModal={closeModal} />}
+            {openModal === 1 && <JobtalksModal closeModal={closeModal} />}
+            {openModal === 2 && <IttyMoadl closeModal={closeModal} />}
+            {openModal === 3 && <CodebridgeModal closeModal={closeModal} />}
+            {openModal === 4 && <TravelmakerModal closeModal={closeModal} />}
+            {openModal === 5 && <JavaburgerModal closeModal={closeModal} />}
         </div>
     );
 };

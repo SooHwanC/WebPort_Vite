@@ -46,6 +46,12 @@ const JavaburgerModal = ({ closeModal }) => {
                         <img src="/modal/javaburger.webp" alt="javaburger" />
                     </div>
                 </div>
+                <div className='modal_detail_link_box'>
+                    <a href="https://github.com/2023-SMHRD-SW-DataDesign-1/DoMyBest.git" target='_blank' rel='noreferrer'>
+                        바로가기
+                    </a>
+                </div>
+
 
                 <div className="modal_detail_wrapper">
                     <hr />

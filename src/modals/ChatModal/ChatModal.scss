@@ -161,6 +161,14 @@
                 margin: clamp(0.2em, 0.6vw, 0.3em) 0 clamp(0.2em, 0.6vw, 0.3em) clamp(0.4em, 1vw, 0.5em);
             }
 
+            ul {
+                list-style-type: disc;
+
+                ul {
+                    list-style-type: circle;
+                }
+            }
+
             a {
                 padding: clamp(0.08em, 0.2vw, 0.1em) clamp(0.2em, 0.5vw, 0.3em);
             }

@@ -45,6 +45,11 @@ const TravelMakerModal = ({ closeModal }) => {
             <img src="/modal/travelmaker.webp" alt="travelmaker" />
           </div>
         </div>
+        <div className="modal_detail_link_box">
+          <a href="https://github.com/2023-SMHRD-SW-DataDesign-1/TravelMaker.git" target='_blank' rel='noreferrer'>
+            바로가기
+          </a>
+        </div>
         <div className="modal_detail_wrapper">
           <hr />
           <h6>
